@@ -1,0 +1,23 @@
+
+//- layout.pug -> copied from template inheritance from pug documentation
+doctype html
+html
+  head
+    title Banking Website
+    block scripts
+    block style
+      
+  body
+    nav#navbar
+        ul 
+            //- div#logo
+                //- img(src="/static/img/logo.png", alt="dance logo")
+                //- | GDA
+            li #[a(href="/") home]
+            li #[a(href="/transfer") transfer]
+            li #[a(href="/history") history]
+            li #[a(href="/members") members]
+            
+    block content
+    footer#footer 
+        | copyright 2022 ghanshyamDanceAcademy.com | All rights reserved
