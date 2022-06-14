@@ -14,19 +14,16 @@ block content
                 th Account No
                 th Email
                 th Balance
-            tr 
-                td Shyam 
-                td 234lkj234 
-                td gkkjadhav@gmail.com 
-                td 60000 
-            tr 
-                td ram 
-                td sdf234234 
-                td ram@gmail.com 
-                td 23000 
-            tr 
-                td mohan 
-                td 345jhjfg 
-                td mohan@gmail.com 
-                td 45000 
+
+            each user in users  
+                tr                 
+                    td #{user.name}
+                    td #{user.accountNo}
+                    td #{user.email}
+                    td #{user.balance}
             
+        table
+
+   
+
+    
