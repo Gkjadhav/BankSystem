@@ -62,7 +62,7 @@ app.post('/viewTransactions',async(req,res)=>{
     try{
         const user=req.body.transfer;
         const sender=await User.findById(user);
-        res.status(200).render('transfer.pug',params);
+        res.status(200).render('transfer.pug');
     }
     catch(err){
         console.log("error"+err);

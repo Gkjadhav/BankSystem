@@ -27,14 +27,14 @@ block content
                 td #{user.balance}   
         table
         <div class="form-container">
-            <form action="/viewTransactions" method="POST"> 
+            <form action="/history" method="get"> 
                 <button value = #{user.id}  type = "submit" class='btns' name = "view" }>View Transactions</button>
 
             </form>
-            <!-- <form action="/addFunds" method="POST"> 
-                 <button value = #{user.id}  type = "submit" class='btns' name = "add" }>Add funds</button>
-            </form> -->
-            <!-- Button trigger modal -->
+            //- <form action="/addFunds" method="POST"> 
+            //-      <button value = #{user.id}  type = "submit" class='btns' name = "add" }>Add funds</button>
+            //- </form> 
+            //- Button trigger modal 
             
             <button  name="add" type="submit" class="btns" data-bs-toggle="modal" data-bs-target="#exampleModal">Add funds</button>
             
