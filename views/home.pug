@@ -6,17 +6,31 @@ block style
         include ../static/style_home.css
 
 block content 
-     h1 Welcome to Sparks Bank
-     <div class="bg">
-        <div class="center">
-        <ul>
-            <li class="operations"><a href="/add"><button class="btns" id="green">Add members</button></a></li>
-            <li class="operations"><a href="/members"><button class="btns" id="red">View All Members</button></a></li>
-            <li class="operations"><a href="/transfer"><button class="btns" id="blue"> Money Transfer</button></a></li>
-            <li class="operations"><a href="/history"><button class="btns" id="green">View Transfer History</button></a></li>
-        </ul>
-        </div>
-     </div>
+    <div class="heading">
+         <h1>Welcome to Sparks Bank</h1>
+         <img src="/static/imgs/2.jpg" alt="">
+    </div>
+    
+    <div class="add">
+            <div class="box1">
+                <img src="/static/imgs/3.jpg" alt="add logo">
+            </div>
+            <div class="box2">
+                <h1>Add New Members</h1>
+                <a href="/add"><button type="button" class="btn btn-success">Add Members</button></a>
+            </div>
+    </div>
+    <div class="view">
+            <div class="box1">
+                <img src="/static/imgs/member1.jpg" alt="add logo">
+            </div>
+            <div class="box2">
+                <h1>View Members</h1>
+                <a href="/members"><button type="button" class="btn btn-primary">View Members</button></a>
+            </div>
+    </div>
+    
+
 
 
     

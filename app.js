@@ -20,7 +20,7 @@ dotenv.config();
 
 
 // express specific stuff
-app.use('static',express.static('static'));
+app.use('/static',express.static('static'));
 app.use(express.urlencoded());
 // app.use(bodyParser.urlencoded({extended:true}));
 
