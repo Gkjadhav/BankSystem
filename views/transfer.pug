@@ -8,7 +8,7 @@ block style
 block content 
     <div class="container">
     
-        <h1>MONEY TRANSFER</h1>
+        <h2>MONEY TRANSFER</h3>
     
 
     <div class="members-img">
@@ -22,14 +22,13 @@ block content
                     <label for="select" style="color: gray;">Sender's Name</label>
                 </div>
                 <div class="select-option">
-                    <select name="select1" id="select1">
-                        each user in users
-                            <option value=#{user.id}> #{user.name} </option>
+                    <select name="select1" id="select1" selected  >
+                        <option value=#{sender.id}> #{sender.name} </option>
                         
                     </select>
                 </div>
                 <div class="reciver-label" style="transform: translate(1rem, 1.8rem);">
-                    <label for="select" style="color: gray;">Receiver's Name</label>
+                    <label for="select" style="color: gray;">Transfer To:-</label>
                 </div>
                 <div class="select-option">
                     <select name="select2" id="select2">
@@ -43,7 +42,7 @@ block content
                     <input type="text" name="amount" id="amount" placeholder="Amount to be send">
                 </div>
                 <div class="transaction-btn">
-                    <button class="btn-tr" type="submit" style="color: gray;">Submit</button>
+                    <button class="btn-tr" type="submit" style="color: gray;">Send</button>
                 </div>
             </form> 
         </div>

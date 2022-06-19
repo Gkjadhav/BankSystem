@@ -8,6 +8,14 @@ const User=require('./model');
 
 const dotenv = require('dotenv');
 const alert=require('alert');
+
+// const ps = require('prompt-sync');
+// const prompt=ps();
+// const prompt=ps({sigint:true});
+
+// const popup = require('node-popup');
+// import {prompt} from 'node-popup';
+// const {prompt}=require('node-popup');
 dotenv.config();
 
 
@@ -49,6 +57,70 @@ app.get('/history',async(req,res)=>{
         res.send('error'+err);
     }
 })
+
+app.post('/viewTransactions',async(req,res)=>{
+    try{
+        const user=req.body.transfer;
+        const sender=await User.findById(user);
+        res.status(200).render('transfer.pug',params);
+    }
+    catch(err){
+        console.log("error"+err);
+        res.send('error'+err);
+    }
+})
+app.post('/addFunds',async(req,res)=>{
+    try{
+        const sender=req.body.add;
+        const funds=Number(req.body.funds);
+        const user=await User.findById(sender);
+        user.balance+=funds;
+        await user.save();
+        const params={user};
+        res.status(200).render('customer_details.pug',params);
+    }
+    catch(err){
+        console.log("error"+err);
+        res.send('error'+err);
+    }
+})
+app.post('/withdrawFunds',async(req,res)=>{
+    try{
+        const sender=req.body.transfer;
+        const funds=Number(req.body.withdraw);
+        const user=await User.findById(sender);
+        if(funds>user.balance){
+            alert('You do not have any  Balance left in your account to Withdraw!');
+            let params={user};
+            res.status(200).render('customer_details.pug',params);
+        }
+        else{
+            user.balance-=funds;
+            await user.save();
+            const params={user};
+            res.status(200).render('customer_details.pug',params);
+        }
+        
+    }
+    catch(err){
+        console.log("error"+err);
+        res.send('error'+err);
+    }
+})
+app.post('/transferFunds',async(req,res)=>{
+    try{
+        const user=req.body.transfer;
+        const sender=await User.findById(user);
+        const users= await User.find();
+        const params={sender,users};
+        res.status(200).render('transfer.pug',params);
+
+    }
+    catch(err){
+        console.log("error"+err);
+        res.send('error'+err);
+    }
+})
 app.get('/transfer',async(req,res)=>{
     try{
         const users= await User.find();
@@ -64,21 +136,24 @@ app.post('/transfer',async(req,res)=>{
     sender=req.body.select1;
     receiver=req.body.select2;
     amount=Number(req.body.amount);
-    const user1= await User.findById(sender);
+    const user= await User.findById(sender);
     const user2= await User.findById(receiver);
-    history=[user1.name,user2.name,amount,user1.date];
-    if(amount>user1.balance){
+    let params={user};
+    history=[user.name,user2.name,amount,user.date];
+    if(amount>user.balance){
         alert('You have less Balance in your account to Transfer!');
-        res.redirect('/transfer');
+        let params={user};
+        res.status(200).render('customer_details.pug',params);
     }else{
-        user1.balance-=amount;
+        user.balance-=amount;
         user2.balance+=amount;
-        await user1.save();
+        await user.save();
         await user2.save();
-        // const userArray=[user1,user2];
+        // const userArray=[user,user2];
         // res.send(userArray);
-        alert("Your money is Tranferred Successfully");
-        res.redirect('/transfer');
+        params={user};
+        alert(`Your money has been  Transferred Successfully to ${user2.name}`);
+        res.status(200).render('customer_details.pug',params);
     }
 
 })
@@ -87,6 +162,20 @@ app.get('/members', async(req, res) => {
         const users= await User.find();
         const params={users};
         res.status(200).render('members.pug',params);
+    }
+    catch(err){
+        console.log("error"+err);
+        res.send('error'+err);
+    }
+})
+
+app.post('/customer_details', async(req, res) => {
+    try{
+        const sender=  req.body.clickBtn;
+        const user= await User.findById(sender);
+        const users= await User.find();
+        const params={user,users};
+        res.status(200).render('customer_details.pug',params);
     }
     catch(err){
         console.log("error"+err);
