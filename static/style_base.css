@@ -1,17 +1,25 @@
-
-#footer{
-    margin: 2px 2px;
-    color: whitesmoke;
-    background-color: black;
-    height: 60px;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+*{
+    font-family: cursive;
 }
+
+body{
+    height: 100vh;
+}
+
 .navbar-brand img{
     height: 60px;
     width: 66px;
     border: 2px solid black;
     border-radius: 12px;
+}
+.footer{
+    color: white;
+    background-color: black;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    /* align-items: center; */
+    /* margin-top: auto; */
+    
+    
 }

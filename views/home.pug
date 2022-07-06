@@ -6,12 +6,91 @@ block style
         include ../static/style_home.css
 
 block content 
-    <div class="heading">
-        <img src="/static/imgs/2.jpg" alt="">
-         <h1>Welcome to Sparks Bank</h1>
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="/static/imgs/12.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Welcome to Sparks Bank</h1>
+                    <p>Sparks Bank offers different type of accounts to meet your financial goals and secure your future. Choose from our wide range of deposit products that are specifically designed to keep your unique requirements in mind.</p>
+                    <a href="https://www.thesparksfoundationsingapore.org/policies-and-code/policies/"><button class="btn btn-danger">Policies</button></a>
+                    <a href=https://www.thesparksfoundationsingapore.org/join-us/why-join-us/"><button class="btn btn-success">Join Us</button></a>
+                    <a href="https://www.thesparksfoundationsingapore.org/contact-us/"><button class="btn btn-primary">Contact Us</button></a>
+                </div>
+            </div>
+            <div class="carousel-item " data-bs-interval="3000">
+                <img src="/static/imgs/14.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Welcome to Sparks Bank</h1>
+                    <p>Sparks Bank offers different type of accounts to meet your financial goals and secure your future. Choose from our wide range of deposit products that are specifically designed to keep your unique requirements in mind.</p>
+                    <a href="https://www.thesparksfoundationsingapore.org/policies-and-code/policies/"><button class="btn btn-danger">Policies</button></a>
+                    <a href=https://www.thesparksfoundationsingapore.org/join-us/why-join-us/"><button class="btn btn-success">Join Us</button></a>
+                    <a href="https://www.thesparksfoundationsingapore.org/contact-us/"><button class="btn btn-primary">Contact Us</button></a>
+                </div>
+            </div>
+            <div class="carousel-item " data-bs-interval="3000">
+                <img src="/static/imgs/2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Welcome to Sparks Bank</h1>
+                    <p>Sparks Bank offers different type of accounts to meet your financial goals and secure your future. Choose from our wide range of deposit products that are specifically designed to keep your unique requirements in mind.</p>
+                    <a href="https://www.thesparksfoundationsingapore.org/policies-and-code/policies/"><button class="btn btn-danger">Policies</button></a>
+                    <a href=https://www.thesparksfoundationsingapore.org/join-us/why-join-us/"><button class="btn btn-success">Join Us</button></a>
+                    <a href="https://www.thesparksfoundationsingapore.org/contact-us/"><button class="btn btn-primary">Contact Us</button></a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <div class="container my-4">
+        <div class="row mb-2">
+            <div class="col-md-6">
+              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <h3 class="d-inline-block mb-2 text-primary">Add New Members</strong>
+                  <!-- <h3 class="mb-0">Featured post</h3> -->
+                  <!-- <div class="mb-1 text-muted">Nov 12</div> -->
+                  <!-- <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p> -->
+                  <a href="/add"><button class="btn btn-danger my-5 mx-5">Add Members</button></a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img class="bd-placeholder-img" width="200" height="250" src="/static/imgs/11.jpg" alt="add logo">
+        
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <h3 class="d-inline-block mb-2 text-success">View All Members</strong>
+                  <!-- <h3 class="mb-0">Post title</h3> -->
+                  <!-- <div class="mb-1 text-muted">Nov 11</div> -->
+                  <!-- <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p> -->
+                  <a href="/members"><button class="btn btn-primary my-5 mx-5">View Members</button></a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img class="bd-placeholder-img" width="200" height="250" src="/static/imgs/8.jpg" alt="add logo">
+        
+                </div>
+            </div>
+            </div>
+        </div>
     </div>
     
-    <div class="add">
+    <!-- <div class="add">
             <div class="box1">
                 <img src="/static/imgs/3.jpg" alt="add logo">
             </div>
@@ -28,7 +107,7 @@ block content
                 <h1>View Members</h1>
                 <a href="/members"><button type="button" class="btn btn-primary">View Members</button></a>
             </div>
-    </div>
+    </div> -->
     
 
 

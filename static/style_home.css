@@ -2,28 +2,16 @@
     margin: 0px 0px;
     padding: 0px 0px;
 }
-
-.heading{
-    /* border: 2px solid black; */
-    height: 80vh;
-    /* display: flex;
-    align-items: center; */
-    background-color: rgb(201, 242, 242);
-    /* margin:2px 2px; */
-}
-.heading h1{
-    margin: 54px 316px;
-    font-size: 50px;
-    position: absolute;
-    top: 475px;
-    color: white;
-}
-.heading img{
-    height: 80vh;
-    width: 100vw;
-    /* position: relative;
-    float: right; */
-}
+.carousel-item {
+    height:600px;
+  }
+  
+  /* .item img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 600px;
+  } */
 
  .add{
     /* border: 2px solid black; */
@@ -61,7 +49,7 @@
 }
 
 .box2 a{
-
+    /* border: 2px solid black; */
     position: relative;
     top: 138px;
     margin: 38px 254px;

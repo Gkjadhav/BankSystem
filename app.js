@@ -9,13 +9,6 @@ const User=require('./model');
 const dotenv = require('dotenv');
 const alert=require('alert');
 
-// const ps = require('prompt-sync');
-// const prompt=ps();
-// const prompt=ps({sigint:true});
-
-// const popup = require('node-popup');
-// import {prompt} from 'node-popup';
-// const {prompt}=require('node-popup');
 dotenv.config();
 
 
