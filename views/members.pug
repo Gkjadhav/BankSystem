@@ -8,7 +8,7 @@ block style
 block content 
     div.container 
         h1 Members List 
-        table 
+        table(class="table table-info table-striped table-hover")
             tr
                 th Name
                 th Account No
@@ -23,10 +23,9 @@ block content
                     td #{user.email}
                     td #{user.balance}
                     td 
-                            <form action="/customer_details" method="POST"> 
-                                <button value = #{user.id}  type = "submit" className='btn' name = "clickBtn" }>View</button>
-                            </form> 
-                       
+                        <form action="/customer_details" method="POST"> 
+                            <button value = #{user.id}  type = "submit" className='btn' name = "clickBtn">Transact</button>
+                        </form> 
         table
 
    

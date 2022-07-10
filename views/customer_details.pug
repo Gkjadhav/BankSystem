@@ -12,7 +12,7 @@ block style
 
 block content 
     div.container 
-        h1 Customer Account Details
+        h1  Account Details
         table 
             tr
                 th Name
@@ -28,20 +28,16 @@ block content
         table
         <div class="form-container">
             <form action="/history" method="get"> 
-                <button value = #{user.id}  type = "submit" class='btns' name = "view" }>View Transactions</button>
-
+                <button value = #{user.id}  type = "submit" class='btn btn-primary btns' name = "view" }>View Transactions</button>
             </form>
-            //- <form action="/addFunds" method="POST"> 
-            //-      <button value = #{user.id}  type = "submit" class='btns' name = "add" }>Add funds</button>
-            //- </form> 
-            //- Button trigger modal 
+           
             
-            <button  name="add" type="submit" class="btns" data-bs-toggle="modal" data-bs-target="#exampleModal">Add funds</button>
+            <button  name="add" type="submit" class="btn btn-secondary btns" data-bs-toggle="modal" data-bs-target="#exampleModal">Add funds</button>
             
             <!-- Modal -->
             <form action="/addFunds" method="post">
                 <div class="modal" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-dialog ">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Add funds to the Account</h5>
@@ -51,13 +47,6 @@ block content
                                 <h6>Enter Amount:</h6>
                                 <input type="Number" name="funds" id="funds">
                             </div>
-                            <!-- <div class="newbuttons">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> 
-                                <button type="submit" value=#{user.id} class="btn btn-primary" name="add" id="add">Add</button>
-                            </div> -->
-                            <!-- <div class="modal-footer">
-
-                            </div> -->
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button> 
                                 <button type="submit" value=#{user.id} class="btn btn-primary" name="add" id="add">Add Funds</button>
@@ -67,16 +56,14 @@ block content
                 </div>
             </form>
             
-            <!-- <form action="/withdrawFunds" method="POST"> 
-                <button value = #{user.id}  type = "submit" class='btns' name = "withdraw" }>Withdraw funds</button>
-            </form> -->
+          
 
-            <button  name="withdraw" type="submit" class="btns" data-bs-toggle="modal" data-bs-target="#withdrawModal">Withdraw funds</button>
+            <button  name="withdraw" type="submit" class="btn btn-success btns" data-bs-toggle="modal" data-bs-target="#withdrawModal">Withdraw funds</button>
             
             <!-- Modal -->
             <form action="/withdrawFunds" method="post">
                 <div class="modal" id="withdrawModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="withdrawModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="withdrawModalLabel">Withdraw Funds</h5>
@@ -97,7 +84,7 @@ block content
 
 
             <form action="/transferFunds" method="POST"> 
-                <button value = #{user.id}  type = "submit" class='btns' name = "transfer" }>Transfer funds</button>
+                <button value = #{user.id}  type = "submit" class='btn btn-danger btns' name = "transfer" }>Transfer funds</button>
             </form>
         
             </form>

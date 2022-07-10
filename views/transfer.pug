@@ -7,38 +7,42 @@ block style
 
 block content 
     <div class="container">
+
+        <div class="container2">
+            <h2>MONEY TRANSFER</h2>
     
-        <h2>MONEY TRANSFER</h3>
-    
-        <div class="form-container">
-            <form action="/transfer" method="POST">
-                <div class="contain">
-                    <div class="reciver-label" ">
-                        <label for="select" style="color: black;">Sender's Name</label>
-                    </div>
-                    <div class="select-option">
-                        <select name="select1" id="select1" selected  >
-                            <option value=#{sender.id}> #{sender.name} </option>
-                            
-                        </select>
-                    </div>
-                    <div class="reciver-label">
-                        <label for="select" style="color: black;">Transfer To:-</label>
-                    </div>
-                    <div class="select-option">
-                        <select name="select2" id="select2">
-                            each user in users
-                                <option value=#{user.id}> #{user.name} </option>
-                            
-                        </select>
-                    </div>
+                <div class="form-container">
+                    <form action="/transfer" method="POST">
+                        <div class="contain">
+                            <div class="reciver-label" ">
+                                <label for="select" style="color: black;">Sender's Name</label>
+                            </div>
+                            <div class="select-option">
+                                <select name="select1" id="select1" selected  >
+                                    <option value=#{sender.id}> #{sender.name} </option>
+                                    
+                                </select>
+                            </div>
+                            <div class="reciver-label">
+                                <label for="select" style="color: black;">Transfer To:-</label>
+                            </div>
+                            <div class="select-option">
+                                <select name="select2" id="select2">
+                                    each user in users
+                                        <option value=#{user.id}> #{user.name} </option>
+                                    
+                                </select>
+                            </div>
+                        </div>
+                        <div class="amount">
+                            <input type="text" name="amount" id="amount" placeholder="Amount to be send">
+                        </div>
+                        <div class="transaction-btn">
+                            <button class=" btn-tr" type="submit" style="color: white;">Send</button>
+                        </div>
+                    </form> 
                 </div>
-                <div class="amount">
-                    <input type="text" name="amount" id="amount" placeholder="Amount to be send">
-                </div>
-                <div class="transaction-btn">
-                    <button class="btn-tr" type="submit" style="color: white;">Send</button>
-                </div>
-            </form> 
         </div>
+    
+        
     </div>

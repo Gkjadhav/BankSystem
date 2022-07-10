@@ -17,14 +17,18 @@
     border: 2px solid black;
     border-radius: 20px;
     width: 60%;
-    height: 60vh;
-    background-color: aqua;
+    height: 100vh;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 label{
    position: relative;
    top: 0px;
 }
 h2 {
+    margin-bottom: 2rem;
     font-size: 3rem;
     text-align: center;
 }
@@ -64,7 +68,7 @@ h2 {
         margin: 4px 428px;
         border-radius: .5rem;
         transform: translate(.9rem, -2rem);
-        background-color: #71d487;
+        background-color: #19a2ec;
         box-shadow: 0 2px 10px  ;
         border: 2px solid black;
         font-size: 1.5rem;
